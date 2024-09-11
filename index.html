@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,12 +35,10 @@
 
     </main>
     <script type="module">
-        import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
-
+       
         const penguinsResponse = await fetch("penguins.json");
         const penguins = await penguinsResponse.json();
-        console.log(penguins)
-
+      
         const plot = Plot.dot(penguins, {
             x: "culmen_length_mm", y: "culmen_depth_mm", stroke: "species"
         }).plot()
@@ -49,8 +49,7 @@
             const data = await response.json();
 
 
-            console.log(data);
-
+           
             const plot2 = Plot.barY(data, {
                 x: "TOURNAMENT",
                 y: "WINNER_PRIZE",
