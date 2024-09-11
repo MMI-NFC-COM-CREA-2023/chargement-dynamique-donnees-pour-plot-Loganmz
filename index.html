@@ -12,21 +12,21 @@
     <header id="header">
         <ul>
             <li><a href="#header">Haut de page</a></li>
-            <li><a href="#sp1">Sous Partie 1</a></li>
-            <li><a href="#sp2">Sous Partie 2</a></li>
+            <li><a href="#sp1">Manchots</a></li>
+            <li><a href="#sp2">grand chelem</a></li>
         </ul>
     </header>
     <main>
-        <h2 id="sp1">Sous Partie 1</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam eveniet qui consequatur in explicabo numquam culpa necessitatibus adipisci facere ea inventore aliquam voluptate, eligendi, quo a quae sequi, neque ullam.</p>
+        <h2 id="sp1">Analyse de la longueur et profondeur du culmens des manchots</h2>
+        <p>Étude des corrélations entre différentes caractéristiques liées à la taille, telles que la longueur du culmen, la profondeur du culmen.</p>
         
         <figure>
             <div id="graphique1" class="graphique"></div>
             <figcaption>légende</figcaption>
         </figure>
 
-        <h2 id="sp2">Sous partie 2</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo alias nam suscipit veritatis aliquid fuga voluptatum rerum repellat repellendus, similique molestias, quaerat doloremque porro! Praesentium illo ipsum facere dignissimos atque.</p>
+        <h2 id="sp2">Evolution des gains du grand vainqueur en grand chelem</h2>
+        <p>Evolution des gains du grand vainqueur en euro pour chaques tournois du grand chelem de 1968 à 2022</p>
     
         
         <figure>
@@ -58,10 +58,12 @@
 
 
            
-            const plot2 = Plot.barY(data, {
-                x: "TOURNAMENT",
-                y: "WINNER_PRIZE",
-                fill: "WINNER_NATIONALITY"
+            const plot2 = Plot.lineY(data, {
+                marginLeft: 75,
+                x: "YEAR",
+                y: "WinnerPrizeEuro",
+                stroke: "TOURNAMENT"
+                
             }).plot();
 
 
