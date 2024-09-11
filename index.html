@@ -48,8 +48,10 @@
         const div = document.querySelector("#graphique1");
         div.append(plot);
     }
-f
-    faitAsync(); 
+
+    faitAsync()  
+
+    async function faitAsync2() {
         const response = await fetch('dataPrize.json');
             const data = await response.json();
 
@@ -65,7 +67,8 @@ f
             const div2 = document.querySelector("#graphique2");
             div2.append(plot2);
 
-      
+        }
+        faitAsync2()
     </script>
 
 </body>
