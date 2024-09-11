@@ -27,7 +27,7 @@
     
         
         <figure>
-            <div id="graphique1" class="graphique"></div>
+            <div id="graphique2" class="graphique"></div>
             <figcaption>légende</figcaption>
         </figure>
 
@@ -45,6 +45,23 @@
         const div = document.querySelector("#graphique1");
         div.append(plot);
         
+        const response = await fetch('dataPrize.json');
+            const data = await response.json();
+
+
+            console.log(data);
+
+            const plot2 = Plot.barY(data, {
+                x: "TOURNAMENT",
+                y: "WINNER_PRIZE",
+                fill: "WINNER_NATIONALITY"
+            }).plot();
+
+
+            const div2 = document.querySelector("#graphique2");
+            div2.append(plot2);
+
+      
     </script>
 
 </body>
