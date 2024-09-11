@@ -39,6 +39,13 @@
         const penguins = await penguinsResponse.json();
         console.log(penguins)
 
+        const plot = Plot.dot(penguins, {
+            x: "culmen_length_mm", y: "culmen_depth_mm", stroke: "species"
+        }).plot()
+        const div = document.querySelector("#graphique1");
+        div.append(plot);
+        
     </script>
+
 </body>
 </html>
