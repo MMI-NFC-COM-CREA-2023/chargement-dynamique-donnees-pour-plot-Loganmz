@@ -34,7 +34,10 @@
         </figure>
 
     </main>
-    <script type="module">
+    <script >
+
+        async function faitAsync() {
+            
        
         const penguinsResponse = await fetch("penguins.json");
         const penguins = await penguinsResponse.json();
@@ -44,7 +47,9 @@
         }).plot()
         const div = document.querySelector("#graphique1");
         div.append(plot);
-        
+    }
+f
+    faitAsync(); 
         const response = await fetch('dataPrize.json');
             const data = await response.json();
 
