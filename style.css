@@ -1,5 +1,44 @@
 .graphique{
-    height: 25vh;
-    width: 25vw;
-    background-color: #333333;
+    height: 50vh;
+    width: 50vw;
+}
+
+header {
+    background-color: #232323;
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin: 0;
+    position: sticky; 
+    right: 0;
+    top: 0;
+    left: 0;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+header li {
+    display: inline;
+    margin: 0 10px;
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    
 }
